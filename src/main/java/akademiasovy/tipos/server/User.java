@@ -8,23 +8,25 @@ public class User {
     private String login;
     private String email;
     private String token;
+    private String password;
 
     public User(String firstname, String lastname, String login, String email) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.login = login;
         this.email = email;
-        generateToken();
+        generetaToken();
     }
 
-    private void generateToken() {
+    private void generetaToken() {
         char[] text=new char[40];
         Random random=new Random();
 
         for(int i=0;i<40;i++){
-            text[i]=(char) (random.nextInt(26)+65);
+            text[i]=(char) (random.nextInt(26)+'A');
         }
         token=String.valueOf(text);
+
         System.out.println(token);
     }
 
@@ -47,4 +49,5 @@ public class User {
     public String getToken() {
         return token;
     }
+
 }

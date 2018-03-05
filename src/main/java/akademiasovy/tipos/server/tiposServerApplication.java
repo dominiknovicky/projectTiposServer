@@ -1,5 +1,6 @@
 package akademiasovy.tipos.server;
 
+import akademiasovy.tipos.server.resources.Bets;
 import akademiasovy.tipos.server.resources.Login;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -33,6 +34,9 @@ public class tiposServerApplication extends Application<tiposServerConfiguration
                 new Login()
         );
 
+        environment.jersey().register(
+                new Bets()
+        );
         final FilterRegistration.Dynamic cors =
                 environment.servlets().addFilter("CORS", CrossOriginFilter.class);
 

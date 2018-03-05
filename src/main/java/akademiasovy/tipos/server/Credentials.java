@@ -3,7 +3,7 @@ package akademiasovy.tipos.server;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Credentials {
-    @JsonProperty("username")
+    @JsonProperty("login")
     public String username;
 
     @JsonProperty("password")
