@@ -9,18 +9,18 @@
         <maven>3.0.0</maven>
     </prerequisites>
 
-    <groupId>Server</groupId>
-    <artifactId>Tipos Server</artifactId>
+    <groupId>sk.akademiasovy.tipos.server</groupId>
+    <artifactId>Tipos</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>tiposServer</name>
+    <name>Tipos</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dropwizard.version>0.8.2</dropwizard.version>
-        <mainClass>akademiasovy.tipos.server.tiposServerApplication</mainClass>
+        <mainClass>sk.akademiasovy.tipos.server.TiposApplication</mainClass>
     </properties>
 
     <dependencies>
@@ -29,12 +29,23 @@
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.6</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
